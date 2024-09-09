@@ -15,3 +15,17 @@ Real Example:
 
 Real Example:
 `./dd-stream http://192.168.122.1:8000/tinyLinux_usb.raw /dev/vdb`
+
+
+### OTHER WAYS : 
+
+### Over Internet: 
+`wget http://example.com/file.raw -O - | dd of=/dev/sda bs=16M`
+
+### Over ssh
+```
+inputFile="/dev/sda"
+outputFile="/dev/sdb"
+host="user@destination"
+dd if="${inputFile}" | gzip -6 - | pv | ssh "${host}"  "gunzip -c - | dd of="${outputFile}"
+```
