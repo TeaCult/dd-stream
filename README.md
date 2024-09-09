@@ -22,7 +22,7 @@ Real Example:
 ### Over Internet: 
 `wget http://example.com/file.raw -O - | dd of=/dev/sda bs=16M`
 
-### Over Ssh:
+### Over ssh:
 ```
 inputFile="/dev/sda"
 outputFile="/dev/sdb"
