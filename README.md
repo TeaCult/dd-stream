@@ -11,7 +11,7 @@ Real Example:
 
 `gcc -o dd-stream dd-stream.c -lcurl`
 
-./dd-stream &lt;url&gt; &lt;device&gt;
+`./dd-stream &lt;url&gt; &lt;device&gt;`
 
 Real Example:
 `./dd-stream http://192.168.122.1:8000/tinyLinux_usb.raw /dev/vdb`
