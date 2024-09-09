@@ -7,7 +7,7 @@ It is essentially like using dd over the internet. This utility streams a raw im
 Real Example:
 `python3 dd-stream.py if=http://192.168.122.1:8000/tinyLinux_usb.raw of=/dev/vdb`
 
-### Or you can use compile and use c version which uses curl : 
+### Or you can use compile and use c version which uses curl: 
 
 `gcc -o dd-stream dd-stream.c -lcurl`
 
@@ -17,12 +17,12 @@ Real Example:
 `./dd-stream http://192.168.122.1:8000/tinyLinux_usb.raw /dev/vdb`
 
 
-### OTHER WAYS : 
+### OTHER WAYS: 
 
 ### Over Internet: 
 `wget http://example.com/file.raw -O - | dd of=/dev/sda bs=16M`
 
-### Over ssh
+### Over Ssh:
 ```
 inputFile="/dev/sda"
 outputFile="/dev/sdb"
