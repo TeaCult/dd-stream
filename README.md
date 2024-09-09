@@ -20,12 +20,12 @@ Real Example:
 ### OTHER WAYS: 
 
 ### Over Internet: 
-`wget http://example.com/file.raw -O - | dd of=/dev/sda bs=16M`
+`wget http://example.com/file.raw -O - | dd of=/dev/sdX bs=16M`
 
 ### Over ssh:
 ```
-inputFile="/dev/sda"
-outputFile="/dev/sdb"
+inputFile="/dev/sdX"  # this is on local 
+outputFile="/dev/sdY" # this is on remote 
 host="user@destination"
 dd if="${inputFile}" | gzip -6 - | pv | ssh "${host}"  "gunzip -c - | dd of="${outputFile}"
 ```
